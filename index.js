@@ -16,3 +16,15 @@ let compteur = 0;
       compteur++; 
       affichage.innerHTML = compteur;
   });
+
+// Récupération des éléments HTML nécessaires
+  const inputTexte = document.getElementById("texteInput");
+  const boutonMajuscule = document.getElementById("afficherMajuscule");
+  const affichageResultat = document.getElementById("resultat");
+    // Écouteur d'événement pour détecter le clic sur le bouton
+
+  boutonMajuscule.addEventListener("click", function () {
+      // Convertir le texte saisi en majuscule
+    const texteMajuscule = inputTexte.value.toUpperCase();
+    affichageResultat.textContent = texteMajuscule;
+  });
